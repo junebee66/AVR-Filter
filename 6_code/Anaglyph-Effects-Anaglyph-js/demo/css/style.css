@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body {
+  color: #333333;
+  font-family:'Roboto',sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing:1px;
+  background-color:#fafafa;
+}
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+
+/** Slider Switch **/
+/* The switch - the box around the slider */
+.switch {
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top:6px;
+  margin-left:24px;
+  z-index: 50;
+}
+
+.switch-text {
+  position:relative;
+  height:36px;
+  margin-left:66px;
+  margin-top:4px;
+  font-size:18px;
+  font-weight: bold;
+  color:blue;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.checkbox-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.checkbox-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .checkbox-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .checkbox-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .checkbox-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.checkbox-slider.round {
+  border-radius: 34px;
+}
+
+.checkbox-slider.round:before {
+  border-radius: 50%;
+}
+
+/*** content ***/
+
+header {
+	height:72px;
+}
+header h1 {
+	font-size:32px;
+	font-weight: 600;
+	margin-left:24px;
+	margin-right:12px;
+	float:left;
+}
+header .github {
+	position: relative;
+	color:#000;
+	font-size:16px;
+	margin-left:24px;
+	line-height: 60px;
+	vertical-align: bottom;
+}
+
+header a {
+	color:#333;
+}
+
+main {
+  position: relative;
+  width:auto;
+  height: auto;
+  margin-top:36px;
+  margin-left:48px;
+}
+
+.wrapper {
+  position: relative;
+  width: auto;
+  height:auto;
+}
+
+.text1 {
+	position:relative;
+	font-size:36px;
+	color:black;
+	width:auto;
+	padding:4px;
+}
+
+.text2 {
+	position:relative;
+	font-size:36px;
+	color:white;
+	background-color:grey;
+	padding:4px;
+	display:inline-block;
+}
+
+.image {
+	margin:12px 0;
+	display: block;
+}

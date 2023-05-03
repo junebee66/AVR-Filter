@@ -1,0 +1,45 @@
+body {
+    background-image: url("./source/Youtube-Video-UI.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #cccccc; */
+    height: 100vh;
+    /* overflow: hidden; */
+   }
+
+   #topNav {
+    width: 100vw;
+    height: 5vh;
+    /* background-color: aqua; */
+   }
+
+
+   #middle{
+    width: 100vw;
+    height: 95vh;
+    /* background-color: red; */
+   }
+
+   #leftColumn{
+    width: 70vw;
+    height: 95vh;
+   }
+
+   #mainVideo{
+    border:0px #ffffff none;
+    display: block;
+    margin-left:1vw;
+    margin-top: 5vh;
+    height: 66vh;
+    width: 100%; 
+   }
+
+   /* #main{
+    border:0px #ffffff none;
+    background-color: red;
+    display: block;
+    margin-left:1vw;
+    margin-top: 5vh;
+    height: 30px;
+    width: 20px; 
+   } */

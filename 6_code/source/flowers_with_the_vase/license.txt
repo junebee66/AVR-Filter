@@ -1,0 +1,11 @@
+Model Information:
+* title:	flowers with the vase
+* source:	https://sketchfab.com/3d-models/flowers-with-the-vase-0f58352d377840cdbeef0bd71b24aff6
+* author:	Gajk.Mv (https://sketchfab.com/Gajk.Mv)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "flowers with the vase" (https://sketchfab.com/3d-models/flowers-with-the-vase-0f58352d377840cdbeef0bd71b24aff6) by Gajk.Mv (https://sketchfab.com/Gajk.Mv) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

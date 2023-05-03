@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>WebCamMesh</title>
+		<meta charset="utf-8" />
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
+		<!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+	</head>
+	<body>
+		<div id="container"></div>
+		<div id="title">WebCamMesh<span class="openBtn"></span></div>
+		<div id="prompt"></div>
+		<div id="info">
+			<span class="closeBtn"></span>
+			<h1>WebCamMesh</h1>
+			<p>Use the mouse to tilt and scroll wheel to zoom. Change parameters with the control panel.</p>
+			<p>
+				This demo projects webcam video onto a 3D Mesh. It creates a 3D depth map by mapping pixel brightness to
+				Z-depth. Perlin noise is used for the ripple effect and CSS3 filters are used for color effects.
+			</p>
+			<p><a href="http://www.airtightinteractive.com/2012/08/webcammesh-demo/">More Info.</a></p>
+			<p>
+				Built by <a href="http://airtight.cc">Felix Turner</a>. Follow:
+				<a href="http://twitter.com/felixturner">@felixturner</a>.
+			</p>
+			<p class="fps"></p>
+		</div>
+		<!-- <script src="js/three.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/controls/OrbitControls.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/effects/AnaglyphEffect.js "></script>
+		
+		<script src="js/dat.gui.min.js"></script>
+		<script src="js/ImprovedNoise.js"></script>
+		<script src="js/Stats.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

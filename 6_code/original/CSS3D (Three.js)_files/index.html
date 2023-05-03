@@ -1,0 +1,911 @@
+
+<!-- saved from url=(0046)http://stemkoski.github.io/Three.js/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Three.js - examples</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1107.0" data-gr-ext-installed="">
+
+<div class="bigTitle">Three.js Examples</div>
+<hr>
+The goal of this collection is to provide a set of basic and instructive examples that introduce the various features in 
+<a class="toc" href="https://github.com/mrdoob/three.js/">Three.js.</a> The source code for each page contains detailed comments.
+<hr>
+Hosted at <a class="toc" href="https://github.com/stemkoski/stemkoski.github.com">GitHub</a>. Total examples: <b>83</b>. Last updated: 23 August 2013. Compatible with Three.js version 60.
+<hr>
+<hr color="black"> <center><b><u>Basic Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#hello-world">Hello World</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#template">Template</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#infobox">Info Box</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#materials-solid">Materials - Solid</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#color-explorer">Color Explorer</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#wireframe">Wireframe</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#dashed-lines">Lines and Dashed Lines</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#helpers">Helpers</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#outline">Outline Effect</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#vertex-colors">Face/Vertex Colors</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shapes">Shapes</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#extrusion">Extrusion</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#text3D">Text3D</a>
+
+<hr color="black"> <center><b><u>Texture Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#textures">Textures</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#texture-repeat">Texture - Repeat</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#texture-text3D">Texture - Text3D </a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#translucence">Translucence</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shadow">Shadow</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#subdivision-cube">Subdivision Modifier - Cube</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#skybox">SkyBox</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#reflection">Reflection</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#refraction">Refraction</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#bubble">Bubble</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#texture-from-canvas">Texture from Canvas</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#texture-animation">Texture Animation</a>
+
+<hr color="black"> <center><b><u>Sprite Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#sprites">Sprites</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#sprite-text-labels">Sprite Text Labels</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#labeled-geometry">Labeled Geometry</a>
+
+<hr color="black"> <center><b><u>Mouse and Keyboard Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mouse-sprite">Mouse Sprite</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mouse-click">Mouse Click</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mouse-hovering">Mouse Hovering</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mouse-tooltip">Mouse Tooltip</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#keyboard-events">Keyboard Events</a>
+
+<hr color="black"> <center><b><u>Camera/Renderer Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mesh-movement">Mesh Movement</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#chase-camera">Chase Camera</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#multiple-cameras">Multiple Cameras</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#camera-texture">Camera to Texture</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#viewports-dual">Viewports - Dual</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#viewports-quad">Viewports - Quad</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#css3d">Embedded HTML</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#anaglyph">Red/Blue Anaglyph</a>
+
+<hr color="black"> <center><b><u>Shader Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-simple">Shader - Simple</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-explorer">Shader - Explorer</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#sphere-unwrapping">Shader - Sphere Unwrapping</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-attributes">Shader - Attributes</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-animate">Shader - Animated Materials</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-fireball">Shader - Animated Fireball</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#shader-glow">Shader - Glow Effect</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#simple-glow">Simple Glow (non-shader)</a>
+
+<hr color="black"> <center><b><u>Particle System Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particles">Particles</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particlesystem-static">Particle System - Static</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particlesystem-shader">Particle System - Shader</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particlesystem-attributes">Particle System - Attributes</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particlesystem-dynamic">Particle System - Dynamic</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particlesystem-pathmovement">Particle System - Path Movement</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#particle-engine">Particle Engine</a>
+
+<hr color="black"> <center><b><u>Video/Webcam Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#video-texture">Video to Texture</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#webcam-test">Webcam Test</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#webcam-texture">Webcam to Texture</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#motion-detection">Motion Detection</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#motion-detection-texture">Motion Detection and Scene</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#many-cameras">Many Cameras</a>
+
+<hr color="black"> <center><b><u>GUI Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#gui">GUI</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#gui-controller">GUI Controller</a>
+
+<hr color="black"> <center><b><u>Gamepad and Leapmotion Controller Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#gamepad-test">Gamepad Test</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#mesh-movement-gamepad">Mesh Movement - Gamepad</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#leapmotion-visualization">LeapMotion Visualization</a>
+
+<hr color="black"> <center><b><u>Model Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#model">Model</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#model-animation">Animated Model</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#model-animation-control">Animated Model with Controls</a>
+<!-- incl. example w/texture? -->
+
+<hr color="black"> <center><b><u>Collision Detection Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#collision-detection">Collision Detection</a>
+
+<hr color="black"> <center><b><u>Marching Cubes Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#marching-cubes">Marching Cubes Algorithm</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#metaballs">Metaballs</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#metabubbles">Metabubbles</a>
+
+<hr color="black"> <center><b><u>Mathematical Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#csg">Constructive Solid Geometry</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#sphere-project">Sphere Projection</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#topology-data">Topology Data</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#topology-data-2">Topology Data 2</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#polyhedra-viewer">Polyhedra Viewer</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#graphulus-function">Function Grapher</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#graphulus-surface">Parametric Surface Grapher</a>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#graphulus-curve">Parametric Curve Grapher</a>
+
+<hr color="black"> <center><b><u>Other Examples</u></b></center>
+• <a class="toc" href="http://stemkoski.github.io/Three.js/index.html#voxel-painter">Voxel Painter</a>
+
+
+•
+<hr>
+<br><br>
+<div class="fancy">
+<a name="hello-world"></a>
+<a href="http://stemkoski.github.io/Three.js/HelloWorld.html" target="_blank">
+<img src="./HelloWorld.png" class="superImage">
+<br>Hello World</a>
+<p class="superText"> A heavily commented but basic scene. Illustrates the setup of a scene, camera, renderer, event handlers (for window resize and fullscreen, provided by the THREEx library), mouse controls to rotate/zoom/pan the scene, mini-display for FPS stats, and setting up basic geometries: a sphere with lighting effects, a multi-colored cube, a plane with an image texture applied, and skybox/fog options for rendering objects distant from the camera.
+<br> Many of these features are described in more detail in the examples below. 
+</p>
+</div>
+
+<div class="fancy">
+<a name="template"></a>
+<a href="http://stemkoski.github.io/Three.js/Template.html" target="_blank">
+<img src="./Template.png" class="superImage">
+<br>Template</a>
+<p class="superText"> The "Hello World" code with most comments and meshes removed. </p>
+</div>
+
+<div class="fancy">
+<a name="infobox"></a>
+<a href="http://stemkoski.github.io/Three.js/Infobox.html" target="_blank">
+<img src="./Infobox.png" class="superImage">
+<br>Info Box</a>
+<p class="superText"> The template code with minimal jQuery added to create a button that displays an information dialog box. </p>
+</div>
+
+<div class="fancy">
+<a name="materials-solid"></a>
+<a href="http://stemkoski.github.io/Three.js/Materials-Solid.html" target="_blank">
+<img src="./Materials-Solid.png" class="superImage">
+<br>Materials - Solid</a>
+<p class="superText"> Illustrates the difference between the Basic, Lambert, and Phong materials. </p>
+</div>
+
+<div class="fancy">
+<a name="color-explorer"></a>
+<a href="http://stemkoski.github.io/Three.js/Color-Explorer.html" target="_blank">
+<img src="./Color-Explorer.png" class="superImage">
+<br>Color Explorer</a>
+<p class="superText"> Illustrates the effects of changing the Color (Diffuse Color), Ambient Color, Emissive Color, Specular Color, Shininess amount, and Opacity amount. </p>
+</div>
+
+<div class="fancy">
+<a name="wireframe"></a>
+<a href="http://stemkoski.github.io/Three.js/Wireframe.html" target="_blank">
+<img src="./Wireframe.png" class="superImage">
+<br>Wireframe</a>
+<p class="superText"> Demonstrates how to create and apply wireframe materials. </p>
+</div>
+
+<div class="fancy">
+<a name="dashed-lines"></a>
+<a href="http://stemkoski.github.io/Three.js/Dashed-Lines.html" target="_blank">
+<img src="./Dashed-Lines.png" class="superImage">
+<br>Lines and Dashed Lines</a>
+<p class="superText"> Demonstrates how to create solid lines, dashed lines, and contains a function to convert geometries into line-style objects. </p>
+</div>
+
+<div class="fancy">
+<a name="helpers"></a>
+<a href="http://stemkoski.github.io/Three.js/Helpers.html" target="_blank">
+<img src="./Helpers.png" class="superImage">
+<br>Helpers</a>
+<p class="superText"> Demonstrates the use of AxisHelper, GridHelper, and ArrowHelper to easily create line-based objects. </p>
+</div>
+
+<div class="fancy">
+<a name="outline"></a>
+<a href="http://stemkoski.github.io/Three.js/Outline.html" target="_blank">
+<img src="./Outline.png" class="superImage">
+<br>Outline Effect</a>
+<p class="superText"> Demonstrates an effect to display a solid outline around a mesh. </p>
+</div>
+
+<div class="fancy">
+<a name="vertex-colors"></a>
+<a href="http://stemkoski.github.io/Three.js/Vertex-Colors.html" target="_blank">
+<img src="./Vertex-Colors.png" class="superImage">
+<br>Face/Vertex Colors</a>
+<p class="superText"> Assigning colors to faces and vertices for gradient effects. </p>
+</div>
+
+<div class="fancy">
+<a name="shapes"></a>
+<a href="http://stemkoski.github.io/Three.js/Shapes.html" target="_blank">
+<img src="./Shapes.png" class="superImage">
+<br>Shapes</a>
+<p class="superText"> Uses some of the built-in geometry constructors to create the following three dimensional shapes (and variations): cube, icosahedron, octahedron, tetrahedron, sphere, dome, cylinder, prism, cone, pyramid, frustum (truncated cone and truncated pyramid), torus, torus knots. </p>
+</div>
+
+<div class="fancy">
+<a name="extrusion"></a>
+<a href="http://stemkoski.github.io/Three.js/Extrusion.html" target="_blank">
+<img src="./Extrusion.png" class="superImage">
+<br>Extrusion</a>
+<p class="superText"> Create an array of 2D points,
+make a 2D shape, and create an extrusion (a 3D shape whose cross-sections are the given 2D shape). </p>
+</div>
+
+<div class="fancy">
+<a name="text3D"></a>
+<a href="http://stemkoski.github.io/Three.js/Text3D.html" target="_blank">
+<img src="./Text3D.png" class="superImage">
+<br>Text3D</a>
+<p class="superText"> Create a 3D text object (an extruded version of text rendered as a 2D image). </p>
+</div>
+
+<div class="fancy">
+<a name="textures"></a>
+<a href="http://stemkoski.github.io/Three.js/Textures.html" target="_blank">
+<img src="./Textures.png" class="superImage">
+<br>Textures</a>
+<p class="superText"> Demonstrates surfaces with textures (image-based materials), including shading and coloring effects. </p>
+</div>
+
+
+<div class="fancy">
+<a name="texture-repeat"></a>
+<a href="http://stemkoski.github.io/Three.js/Texture-Repeat.html" target="_blank">
+<img src="./Texture-Repeat.png" class="superImage">
+<br>Texture - Repeat</a>
+<p class="superText"> Repeating (tiling) a texture on a surface. </p>
+</div>
+
+<div class="fancy">
+<a name="texture-text3D"></a>
+<a href="http://stemkoski.github.io/Three.js/Text3D-Textures.html" target="_blank">
+<img src="./Text3D-Textures.png" class="superImage">
+<br>Texture - Text3D</a>
+<p class="superText"> Applying a texture to 3D Text. (Requires repeating texture on surface.) </p>
+</div>
+
+<div class="fancy">
+<a name="translucence"></a>
+<a href="http://stemkoski.github.io/Three.js/Translucence.html" target="_blank">
+<img src="./Translucence.png" class="superImage">
+<br>Translucence</a>
+<p class="superText"> Illustrates using basic and phong-shaded translucent materials, making image textures translucent, using additive blending for a glow-like effect, and using image textures that already have alpha transparency. </p>
+</div>
+
+<div class="fancy">
+<a name="shadow"></a>
+<a href="http://stemkoski.github.io/Three.js/Shadow.html" target="_blank">
+<img src="./Shadow.png" class="superImage">
+<br>Shadow</a>
+<p class="superText"> Using spotlights to create shadow effects in a scene. </p>
+</div>
+
+<div class="fancy">
+<a name="subdivision-cube"></a>
+<a href="http://stemkoski.github.io/Three.js/Subdivision-Cube.html" target="_blank">
+<img src="./Subdivision-Cube.png" class="superImage">
+<br>Subdivision Modifier - Cube</a>
+<p class="superText"> Demostrates a function that interpolates additional points to a geometry, creating a "smoothing" effect. This example applies the modifier to a variety of cube geometries, resulting in spherical and beveled cubes. </p>
+</div>
+
+<div class="fancy">
+<a name="skybox"></a>
+<a href="http://stemkoski.github.io/Three.js/Skybox.html" target="_blank">
+<img src="./Skybox.png" class="superImage">
+<br>SkyBox</a>
+<p class="superText"> Using textures to create a "SkyBox": backgrounds images projected onto a cube surrounding the rendering region, which creates the illusion of distant 3D surroundings. </p>
+</div>
+
+<div class="fancy">
+<a name="reflection"></a>
+<a href="http://stemkoski.github.io/Three.js/Reflection.html" target="_blank">
+<img src="./Reflection.png" class="superImage">
+<br>Reflection</a>
+<p class="superText"> Creating a mirror-like material by projecting an image of the surroundings onto a object. </p>
+</div>
+
+<div class="fancy">
+<a name="refraction"></a>
+<a href="http://stemkoski.github.io/Three.js/Refraction.html" target="_blank">
+<img src="./Refraction.png" class="superImage">
+<br>Refraction</a>
+<p class="superText"> Creating a glass-like material by projecting a refracted image of the surroundings onto a object. </p>
+</div>
+
+<div class="fancy">
+<a name="bubble"></a>
+<a href="http://stemkoski.github.io/Three.js/Bubble.html" target="_blank">
+<img src="./Bubble.png" class="superImage">
+<br>Bubble</a>
+<p class="superText"> Creating a bubble-like material (incorporates reflection, refraction, and chromatic abberation) using a Fresnel shader. </p>
+</div>
+
+<div class="fancy">
+<a name="texture-from-canvas"></a>
+<a href="http://stemkoski.github.io/Three.js/Texture-From-Canvas.html" target="_blank">
+<img src="./Texture-From-Canvas.png" class="superImage">
+<br>Texture from Canvas</a>
+<p class="superText"> Create a canvas element via JavaScript, draw text or images on it, and then use it as a texture for a mesh. </p>
+</div>
+
+<div class="fancy">
+<a name="texture-animation"></a>
+<a href="http://stemkoski.github.io/Three.js/Texture-Animation.html" target="_blank">
+<img src="./Texture-Animation.png" class="superImage">
+<br>Texture Animation</a>
+<p class="superText"> Animate a spritesheet image texture on a surface. </p>
+</div>
+
+<div class="fancy">
+<a name="sprites"></a>
+<a href="http://stemkoski.github.io/Three.js/Sprites.html" target="_blank">
+<img src="./Sprites.png" class="superImage">
+<br>Sprites</a>
+<p class="superText"> Sprites are images (not attached to geometries/surfaces) displayed in a scene, always orthogonal to the camera.
+They can either appear in the 3D scene (useful as part of a particle effect) or rendered using screen coordinates (useful as part of a graphical user interface (GUI) or a heads-up display (HUD)). </p>
+</div>
+
+<div class="fancy">
+<a name="sprite-text-labels"></a>
+<a href="http://stemkoski.github.io/Three.js/Sprite-Text-Labels.html" target="_blank">
+<img src="./Sprite-Text-Labels.png" class="superImage">
+<br>Sprite Text Labels</a>
+<p class="superText"> Combines techniques from Sprite demo and Texture from Canvas demo, introducing a function to easily make customizable text labels.</p>
+</div>
+
+<div class="fancy">
+<a name="labeled-geometry"></a>
+<a href="http://stemkoski.github.io/Three.js/Labeled-Geometry.html" target="_blank">
+<img src="./Labeled-Geometry.png" class="superImage">
+<br>Labeled Geometry</a>
+<p class="superText"> Application of the Sprite Text Labels demo to label all vertices and edges of a geometry with their index number.</p>
+</div>
+
+<div class="fancy">
+<a name="mouse-sprite"></a>
+<a href="http://stemkoski.github.io/Three.js/Mouse-Sprite.html" target="_blank">
+<img src="./Mouse-Sprite.png" class="superImage">
+<br>Mouse Sprite</a>
+<p class="superText"> Display a sprite at the current position of the mouse. (May be useful for targeting icon or mouse pointer icon.) </p>
+</div>
+
+<div class="fancy">
+<a name="mouse-click"></a>
+<a href="http://stemkoski.github.io/Three.js/Mouse-Click.html" target="_blank">
+<img src="./Mouse-Click.png" class="superImage">
+<br>Mouse Click</a>
+<p class="superText"> Change the color of a face on a mesh when clicked. </p>
+</div>
+
+<div class="fancy">
+<a name="mouse-over"></a>
+<a href="http://stemkoski.github.io/Three.js/Mouse-Over.html" target="_blank">
+<img src="./Mouse-Over.png" class="superImage">
+<br>Mouse Hovering</a>
+<p class="superText"> Change the color of an object in the scene when the mouse hovers over it. </p>
+</div>
+
+<div class="fancy">
+<a name="mouse-tooltip"></a>
+<a href="http://stemkoski.github.io/Three.js/Mouse-Tooltip.html" target="_blank">
+<img src="./Mouse-Tooltip.png" class="superImage">
+<br>Mouse Tooltip</a>
+<p class="superText"> Create a tooltip-style effect to display mesh names when mouse hovers. (Uses ideas from examples: Mouse Sprite, Mouse Hovering, and Texture from Canvas.) </p>
+</div>
+
+<div class="fancy">
+<a name="keyboard-events"></a>
+<a href="http://stemkoski.github.io/Three.js/Keyboard.html" target="_blank">
+<img src="./Template.png" class="superImage">
+<br>Keyboard Events</a>
+<p class="superText"> Demonstrates use of KeyboardState.js to respond to key down/pressed/up events. </p>
+</div>
+
+<div class="fancy">
+<a name="mesh-movement"></a>
+<a href="http://stemkoski.github.io/Three.js/Mesh-Movement.html" target="_blank">
+<img src="./Mesh-Movement.png" class="superImage">
+<br>Mesh Movement</a>
+<p class="superText"> Using the functionality provided by THREEx.Keyboard, translate and rotate a mesh, with the following controls:
+<br> W/S/Q/E: translate forwards/backwards/left/right (local). <br> A/D/R/F: rotate left/right/up/down (local). 
+<br> UP/DOWN/LEFT/RIGHT: translate Z-/Z+/X-/X+ (global). </p>
+</div>
+
+<div class="fancy">
+<a name="chase-camera"></a>
+<a href="http://stemkoski.github.io/Three.js/Chase-Camera.html" target="_blank">
+<img src="./Chase-Camera.png" class="superImage">
+<br>Chase Camera</a>
+<p class="superText"> Create a "chase cam" -- move the camera around together with a mesh. (Same controls as in "Mesh Movement" example.)</p>
+</div>
+
+<div class="fancy">
+<a name="multiple-cameras"></a>
+<a href="http://stemkoski.github.io/Three.js/Multiple-Cameras.html" target="_blank">
+<img src="./Multiple-Cameras.png" class="superImage">
+<br>Multiple Cameras</a>
+<p class="superText"> Switch between multiple cameras: chase camera (press "1") and fixed top view (press "2"). (Otherwise, same controls as in "Mesh Movement" example.)</p>
+</div>
+
+<div class="fancy">
+<a name="camera-texture"></a>
+<a href="http://stemkoski.github.io/Three.js/Camera-Texture.html" target="_blank">
+<img src="./Camera-Texture.png" class="superImage">
+<br>Camera to Texture</a>
+<p class="superText"> Move around a camera and project what it sees it onto a texture. (Same controls as in "Mesh Movement" example.)
+</p>
+</div>
+
+<div class="fancy">
+<a name="viewports-dual"></a>
+<a href="http://stemkoski.github.io/Three.js/Viewports-Dual.html" target="_blank">
+<img src="./Viewports-Dual.png" class="superImage">
+<br>Viewports - Dual</a>
+<p class="superText"> Simultaneously render two different camera views onto the same canvas element.
+(Same controls as in "Mesh Movement" example.)
+</p>
+</div>
+
+<div class="fancy">
+<a name="viewports-quad"></a>
+<a href="http://stemkoski.github.io/Three.js/Viewports-Quad.html" target="_blank">
+<img src="./Viewports-Quad.png" class="superImage">
+<br>Viewports - Quad</a>
+<p class="superText"> Simultaneously render four different camera views onto the same canvas element: one perspective camera and three
+orthographic cameras along the axis directions (similar to many 3D modeling software configurations).
+(Same controls as in "Mesh Movement" example.)
+</p>
+</div>
+
+<div class="fancy">
+<a name="css3d"></a>
+<a href="http://stemkoski.github.io/Three.js/CSS3D.html" target="_blank">
+<img src="./CSS3D.png" class="superImage">
+<br>Embedded HTML</a>
+<p class="superText"> Displays an interactive webpage within a Three.js scene. Based on the work of Jerome Etienne:
+http://learningthreejs.com/blog/2013/04/30/closing-the-gap-between-html-and-webgl/
+</p>
+</div>
+
+<div class="fancy">
+<a name="anaglyph"></a>
+<a href="http://stemkoski.github.io/Three.js/Anaglyph.html" target="_blank">
+<img src="./Anaglyph.png" class="superImage">
+<br>Anaglyph</a>
+<p class="superText"> Displays a scene rendered using an Anaglyph effect; use red/blue 3D glasses to view.
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-simple"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Simple.html" target="_blank">
+<img src="./Shader-Simple.png" class="superImage">
+<br>Shader - Simple</a>
+<p class="superText"> Demonstrates how to set up a simple pre-defined shader (sepia coloring).
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-explorer"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Explorer.html" target="_blank">
+<img src="./Shader-Explorer.png" class="superImage">
+<br>Shader - Explorer</a>
+<p class="superText"> Illustrates the effects of changing the parameters in different shaders (sepia, vignette, dot screen).
+</p>
+</div>
+
+
+<div class="fancy">
+<a name="sphere-unwrapping"></a>
+<a href="http://stemkoski.github.io/Three.js/Sphere-Unwrapping.html" target="_blank">
+<img src="./Sphere-Unwrapping.png" class="superImage">
+<br>Shader - Sphere Unwrapping</a>
+<p class="superText"> Demonstrates using a vertex shader to animate vertices, changing their positions according to their UV-coordinates; the result is a sphere that "flattens" into a plane.
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-attributes"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Attributes.html" target="_blank">
+<img src="./Shader-Attributes.png" class="superImage">
+<br>Shader - Attributes</a>
+<p class="superText"> Demonstrates using a vertex shader to animate vertices, using "attributes": a set of values associated to each vertex.
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-animate"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Animate.html" target="_blank">
+<img src="./Shader-Animate.png" class="superImage">
+<br>Shader - Animated Materials</a>
+<p class="superText"> Demonstrates the animation of materials using shaders, featuring a lava effect and a water effect.
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-fireball"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Fireball.html" target="_blank">
+<img src="./Shader-Fireball.png" class="superImage">
+<br>Shader - Animated Fireball</a>
+<p class="superText"> Builds upon the "Shader - Animated Materials" demo: a second image is randomly distorted and blended with the first, and the positions of the vertices are randomly distorted. These effects are combined to create an animated fireball.
+</p>
+</div>
+
+<div class="fancy">
+<a name="shader-glow"></a>
+<a href="http://stemkoski.github.io/Three.js/Shader-Glow.html" target="_blank">
+<img src="./Shader-Glow.png" class="superImage">
+<br>Shader - Glow Effect</a>
+<p class="superText"> Create a glow effect using shaders. Includes GUI to adjust shader parameters. Using front-face rendering can create glow or shell style effects; using back-face rendering can create halo or atmosphere style effects (see information in-demo for corresponding parameter values). </p>
+</div>
+
+<div class="fancy">
+<a name="simple-glow"></a>
+<a href="http://stemkoski.github.io/Three.js/Simple-Glow.html" target="_blank">
+<img src="./Simple-Glow.png" class="superImage">
+<br>Simple Glow (non-shader)</a>
+<p class="superText"> Create a glow effect *without* using custom shader material -- uses a additively blended sprite. (Only works well with spherical objects.) </p>
+</div>
+
+<!--
+
+These two demos have been replaced by the Shader - Glow Effect demo,
+which is much more efficient and easier to understand than creating two scenes.
+
+<div class="fancy">
+<a name="selective-glow"></a>
+<a href="Selective-Glow.html" target="_blank">
+<img src="html-images/Selective-Glow.png" class="superImage" />
+<br/>Selective Glow Effect using Shaders</a>
+<p class ="superText"> Demonstrates a selective glow effect using shaders. This approach requires the creation of two scenes - the base scene and a secondary scene containing copies of the base scene objects with either bright textures for glow effects or black textures. The secondary scene is blurred and then additively blended with the base scene.
+</p>
+</div>
+
+<div class="fancy">
+<a name="atmosphere"></a>
+<a href="Atmosphere.html" target="_blank">
+<img src="html-images/Atmosphere.png" class="superImage" />
+<br/>Atmosphere Effect using Shaders</a>
+<p class ="superText"> Demonstrates an atmosphere effect using shaders. This approach requires the creation of two scenes - the base scene and a secondary scene containing a spherical object with a gradient texture created using a shader. The secondary scene is then additively blended with the base scene.
+</p>
+</div>
+-->
+
+<div class="fancy">
+<a name="particles"></a>
+<a href="http://stemkoski.github.io/Three.js/Particles.html" target="_blank">
+<img src="./Particles.png" class="superImage">
+<br>Particles</a>
+<p class="superText"> Create a particle effect using a group of sprites and alpha blending (or transparency). </p>
+</div>
+
+<div class="fancy">
+<a name="particlesystem-static"></a>
+<a href="http://stemkoski.github.io/Three.js/ParticleSystem-Static.html" target="_blank">
+<img src="./ParticleSystem-Static.png" class="superImage">
+<br>Particle System - Static</a>
+<p class="superText"> Create a group of particles using the ParticleSystem object (for faster rendering). Each vertex in a given geometry corresponds to the position of a particle. </p>
+</div>
+
+<div class="fancy">
+<a name="particlesystem-shader"></a>
+<a href="http://stemkoski.github.io/Three.js/ParticleSystem-Shader.html" target="_blank">
+<img src="./ParticleSystem-Static.png" class="superImage">
+<br>Particle System - Shader</a>
+<p class="superText"> The "Particle System - Static" demo rewritten using a shader-based material; will be useful in subsequent demos.</p>
+</div>
+
+<div class="fancy">
+<a name="particlesystem-attributes"></a>
+<a href="http://stemkoski.github.io/Three.js/ParticleSystem-Attributes.html" target="_blank">
+<img src="./ParticleSystem-Attributes.png" class="superImage">
+<br>Particle System - Attributes</a>
+<p class="superText"> Builds upon "Particle System - Shader" demo, incorporating shader attributes, enabling each particle to have customized properties - in this case, each particle is assigned a different color. </p>
+</div>
+
+<div class="fancy">
+<a name="particlesystem-dynamic"></a>
+<a href="http://stemkoski.github.io/Three.js/ParticleSystem-Dynamic.html" target="_blank">
+<img src="./ParticleSystem-Dynamic.png" class="superImage">
+<br>Particle System - Dynamic</a>
+<p class="superText"> Builds upon "Particle System - Attributes" demo, incorporating animation: particle sizes oscillate at different frequencies over time. </p>
+</div>
+
+<div class="fancy">
+<a name="particlesystem-pathmovement"></a>
+<a href="http://stemkoski.github.io/Three.js/ParticleSystem-PathMovement.html" target="_blank">
+<img src="./ParticleSystem-PathMovement.png" class="superImage">
+<br>Particle System - Path Movement</a>
+<p class="superText"> A particle system with particles moving along a path.</p>
+</div>
+
+<div class="fancy">
+<a name="particle-engine"></a>
+<a href="http://stemkoski.github.io/Three.js/Particle-Engine.html" target="_blank">
+<img src="./Particle-Engine.png" class="superImage">
+<br>Particle Engine</a>
+<p class="superText"> A complete particle engine for controlling a particle system to create special effects such as fire, smoke, stars, snow, and fireworks.
+Includes 11 example effects. Customizable particle properties include particle image, rotation, size, color, and opacity.</p>
+</div>
+
+<div class="fancy">
+<a name="video-texture"></a>
+<a href="http://stemkoski.github.io/Three.js/Video.html" target="_blank">
+<img src="./Video.png" class="superImage">
+<br>Video to Texture</a>
+<p class="superText"> Display a video as a texture. Keyboard controls: "P" to play/resume, "SPACE" to pause, "R" to rewind, "S" to stop.
+</p>
+</div>
+
+<hr color="black">
+
+<div class="fancy">
+<a name="webcam-test"></a>
+<a href="http://stemkoski.github.io/Three.js/Webcam-Test.html" target="_blank">
+<img src="./Webcam-Test.png" class="superImage">
+<br>Webcam Test</a>
+<p class="superText"> Displays user webcam image on this webpage. Requires Webcam,
+user needs to accept permissions to run, requires WebRTC compatible browser  (see http://www.webrtc.org/).
+(No Three.js code required; this example is a lead-in to the following example.)</p>
+</div>
+
+<div class="fancy">
+<a name="webcam-texture"></a>
+<a href="http://stemkoski.github.io/Three.js/Webcam-Texture.html" target="_blank">
+<img src="./Webcam-Texture.png" class="superImage">
+<br>Webcam Texture</a>
+<p class="superText"> Displays user webcam image as a texture on a mesh. Requires Webcam,
+user needs to accept permissions to run, requires WebRTC compatible browser  (see http://www.webrtc.org/). 
+Press P to pause webcam (image freezes) and R to resume webcam.
+</p>
+</div>
+
+<div class="fancy">
+<a name="many-cameras"></a>
+<a href="http://stemkoski.github.io/Three.js/Many-Cameras.html" target="_blank">
+<img src="./Many-Cameras.png" class="superImage">
+<br>Many Cameras</a>
+<p class="superText"> Displays user webcam image as a texture on a moveable mesh (W/A/S/D/Q/E). 
+Incorporates code from examples: Webcam Texture, Mesh Movement, Reflection, Skybox, and Viewports - Dual.
+Requires Webcam,
+user needs to accept permissions to run, requires WebRTC compatible browser  (see http://www.webrtc.org/). 
+</p>
+</div>
+
+<div class="fancy">
+<a name="motion-detection"></a>
+<a href="http://stemkoski.github.io/Three.js/Webcam-Motion-Detection.html" target="_blank">
+<img src="./Webcam-Motion-Detection.png" class="superImage">
+<br>Motion Detection</a>
+<p class="superText"> Displays user webcam image on webpage. 
+Requires WebRTC compatible browser  (see http://www.webrtc.org/).
+Detects motion occuring within given regions; see http://www.youtube.com/watch?v=ehkqgaGwGcw for demo.
+Based on http://www.adobe.com/devnet/html5/articles/javascript-motion-detection.html.
+(No Three.js code required; this example is a lead-in to the following example.)
+</p>
+</div>
+
+<div class="fancy">
+<a name="motion-detection-texture"></a>
+<a href="http://stemkoski.github.io/Three.js/Webcam-Motion-Detection-Texture.html" target="_blank">
+<img src="./Webcam-Motion-Detection-Texture.png" class="superImage">
+<br>Motion Detection and Scene</a>
+<p class="superText"> Displays user webcam image on webpage. Requires Webcam,
+user needs to accept permissions to run, requires WebRTC compatible browser  (see http://www.webrtc.org/).
+Detects motion occuring over graphics regions, and changes texture on spinning cube accordingly.
+</p>
+</div>
+
+<div class="fancy">
+<a name="gui"></a>
+<a href="http://stemkoski.github.io/Three.js/GUI.html" target="_blank">
+<img src="./GUI.png" class="superImage">
+<br>GUI</a>
+<p class="superText"> Create a graphical user interface (using the DAT.GUI library). </p>
+</div>
+
+<div class="fancy">
+<a name="gui-controller"></a>
+<a href="http://stemkoski.github.io/Three.js/GUI-Controller.html" target="_blank">
+<img src="./GUI-Controller.png" class="superImage">
+<br>GUI Controller</a>
+<p class="superText"> Create a graphical user interface (using the DAT.GUI library) that controls the appearance of a cube mesh. </p>
+</div>
+
+
+<div class="fancy">
+<a name="gamepad-test"></a>
+<a href="http://stemkoski.github.io/Three.js/Gamepad-Test.html" target="_blank">
+<img src="./Gamepad-Test.png" class="superImage">
+<br>Gamepad Test</a>
+<p class="superText"> Uses a Gamepad (e.g. XBox controller) to move a square image around a canvas. Requires Chrome browser and connected gamepad to run. Uses gamepad.js library (patched) from http://github.com/inequation/gamepad.js. Analog sticks and directional pad move square up/down/left/right. A/B/X/Y buttons change colors of square. Start/select buttons reset square to original position. [Note: You may need to press one of A/B/X/Y buttons for controller to be recognized by the web browser.]  
+(No Three.js code required; this example is a lead-in to the following example.)</p>
+</div>
+
+<div class="fancy">
+<a name="mesh-movement-gamepad"></a>
+<a href="http://stemkoski.github.io/Three.js/Mesh-Movement-Gamepad.html" target="_blank">
+<img src="./Mesh-Movement-Gamepad.png" class="superImage">
+<br>Mesh Movement - Gamepad</a>
+<p class="superText"> Uses a Gamepad (e.g. XBox controller) to move a cube around a Three.js scene, similar to Mesh-Movement example above. Requires Chrome browser and connected gamepad to run. Left analog stick moves cube forward/backward and turns left/right.  Directional pad moves cube forward/backward/left/right.  Right analog stick only turns cube left/right.  Right shoulder buttons double speed of movement/turns. Start/select buttons reset cube to original position and rotation.
+</p>
+</div>
+
+<div class="fancy">
+<a name="leapmotion-visualization"></a>
+<a href="http://stemkoski.github.io/Three.js/LeapMotion.html" target="_blank">
+<img src="./LeapMotion.png" class="superImage">
+<br>LeapMotion - Visualization</a>
+<p class="superText"> Visualize hand/finger position data from LeapMotion device. <br> <a href="http://www.leapmotion.com/">LeapMotion website</a>
+</p>
+</div>
+
+
+<div class="fancy">
+<a name="model"></a>
+<a href="http://stemkoski.github.io/Three.js/Model.html" target="_blank">
+<img src="./Model.png" class="superImage">
+<br>Model</a>
+<p class="superText"> Loading a static 3D model (exported from Blender to JavaScript). </p>
+</div>
+
+<div class="fancy">
+<a name="model-animation"></a>
+<a href="http://stemkoski.github.io/Three.js/Model-Animation.html" target="_blank">
+<img src="./Model-Animation.png" class="superImage">
+<br>Animated Model</a>
+<p class="superText"> Loading an animated 3D model (exported from Blender to JavaScript). </p>
+</div>
+
+<div class="fancy">
+<a name="model-animation-control"></a>
+<a href="http://stemkoski.github.io/Three.js/Model-Animation-Control.html" target="_blank">
+<img src="./Model-Animation-Control.png" class="superImage">
+<br>Animated Model with Controls</a>
+<p class="superText"> Loading an animated 3D model (exported from Blender to JavaScript). Model moves with arrow keys; model animates when moving and stops animating when not moving. </p>
+</div>
+
+<div class="fancy">
+<a name="collision-detection"></a>
+<a href="http://stemkoski.github.io/Three.js/Collision-Detection.html" target="_blank">
+<img src="./Collision-Detection.png" class="superImage">
+<br>Collision Detection</a>
+<p class="superText"> Detect when the vertices of a mesh intersect with another object. (Move the wireframe cube with the arrow keys and rotate with W/A/S/D; the text "Hit" will appear at the top of the screen once for every vertex intersection.)</p>
+</div>
+
+<div class="fancy">
+<a name="marching-cubes"></a>
+<a href="http://stemkoski.github.io/Three.js/Marching-Cubes.html" target="_blank">
+<img src="./Marching-Cubes.png" class="superImage">
+<br>Marching Cubes Algorithm</a>
+<p class="superText"> An illustration of the "Marching Cubes" algorithm for triangulating a level surface ("isosurface") of an implicitly defined function <i>f(x,y,z) = c</i>. See the websites:
+<br>http://en.wikipedia.org/wiki/Marching_cubes/
+<br>http://paulbourke.net/geometry/polygonise/ </p>
+</div>
+
+<div class="fancy">
+<a name="metaballs"></a>
+<a href="http://stemkoski.github.io/Three.js/Metaballs.html" target="_blank">
+<img src="./Metaballs.png" class="superImage">
+<br>Metaballs</a>
+<p class="superText"> A effect where spheres move around and their surfaces merge and split; the surfaces are calculated by implicit functions and drawn using the "Marching Cubes" algorithm. For more information, see the websites: 
+<br> http://en.wikipedia.org/wiki/Metaballs 
+<br> http://www.geisswerks.com/ryan/BLOBS/blobs.html 
+</p>
+</div>
+
+<div class="fancy">
+<a name="metabubbles"></a>
+<a href="http://stemkoski.github.io/Three.js/Metabubbles.html" target="_blank">
+<img src="./Metabubbles.png" class="superImage">
+<br>Metabubbles</a>
+<p class="superText"> Metaballs demo + Bubble demo = Metabubbles demo!
+</p>
+</div>
+
+<div class="fancy">
+<a name="csg"></a>
+<a href="http://stemkoski.github.io/Three.js/CSG.html" target="_blank">
+<img src="./CSG.png" class="superImage">
+<br>Constructive Solid Geometry</a>
+<p class="superText"> Create a new mesh from the union, intersection, or subtraction of two meshes. 
+Uses the library at http://github.com/chandlerprall/ThreeCSG/</p>
+</div>
+
+<div class="fancy">
+<a name="sphere-project"></a>
+<a href="http://stemkoski.github.io/Three.js/Sphere-Project.html" target="_blank">
+<img src="./Sphere-Project.png" class="superImage">
+<br>Sphere Projection</a>
+<p class="superText"> Projects a wireframe cube onto a sphere. Includes a method for drawing the arc between two points on a sphere. </p>
+</div>
+
+<div class="fancy">
+<a name="topology-data"></a>
+<a href="http://stemkoski.github.io/Three.js/Topology-Data.html" target="_blank">
+<img src="./Topology-Data.png" class="superImage">
+<br>Topology Data</a>
+<p class="superText"> From a THREE.Geometry, creates a topological data structure consisting of vertices, edges, and faces, with incidence data for each. For this example, the corresponding geometry is labeled (including edges) and the data can be manually verified from the browser console. (Builds on Lebeled Geometry demo.)</p>
+</div>
+
+<div class="fancy">
+<a name="topology-data-2"></a>
+<a href="http://stemkoski.github.io/Three.js/Topology-Data-2.html" target="_blank">
+<img src="./Topology-Data-2.png" class="superImage">
+<br>Topology Data 2</a>
+<p class="superText"> Builds upon Topology Data demo; illustrates edge and face subdivision and retriangulation functions and proper face coloring function.</p>
+</div>
+
+<div class="fancy">
+<a name="polyhedra-viewer"></a>
+<a href="http://stemkoski.github.io/Three.js/Polyhedra.html" target="_blank">
+<img src="./Polyhedra.png" class="superImage">
+<br>Polyhedra Viewer</a>
+<p class="superText"> Interactive viewer of polyhedra (Platonic, Archimedean, Prisms, Antiprisms, Johnson Solids).</p>
+</div>
+
+<div class="fancy">
+<a name="graphulus-function"></a>
+<a href="http://stemkoski.github.io/Three.js/Graphulus-Function.html" target="_blank">
+<img src="./Graphulus-Function.png" class="superImage">
+<br>Function Grapher</a>
+<p class="superText"> Graph a function of the form <i>z = f( x, y )</i>. </p>
+</div>
+
+<div class="fancy">
+<a name="graphulus-surface"></a>
+<a href="http://stemkoski.github.io/Three.js/Graphulus-Surface.html" target="_blank">
+<img src="./Graphulus-Surface.png" class="superImage">
+<br>Parametric Surface Grapher</a>
+<p class="superText"> Graph a parametric surface of the form <i>x = f( u, v ), y = g( u, v ), z = h( u, v )</i>. </p>
+</div>
+
+<div class="fancy">
+<a name="graphulus-curve"></a>
+<a href="http://stemkoski.github.io/Three.js/Graphulus-Curve.html" target="_blank">
+<img src="./Graphulus-Curve.png" class="superImage">
+<br>Parametric Curve Grapher</a>
+<p class="superText"> Graph a parametric curve of the form <i>x = f( t ), y = g( t ), z = h( t )</i>. </p>
+</div>
+
+<div class="fancy">
+<a name="voxel-painter"></a>
+<a href="http://stemkoski.github.io/Three.js/Voxel-Painter.html" target="_blank">
+<img src="./Voxel-Painter.png" class="superImage">
+<br>Voxel Painter</a>
+<p class="superText"> Paint with voxels, Minecraft-style! (Think: 3D pixel editor.) </p>
+</div>
+
+
+<!--
+<div class="fancy">
+<a name="zzzz"></a>
+<a href="zzzz.html" target="_blank">
+<img src="html-images/zzzz.png" class="superImage" />
+<br/>zzzz</a>
+<p class ="superText"> ... </p>
+</div>
+-->
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

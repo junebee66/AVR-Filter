@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Anaglyph.js Demo Page</title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+	   <h1>jQuery Anaglyph.js Demo Page</h1>
+       
+    <label class="switch">
+    	<input type="checkbox" id="2d3dswitch">
+    	<div class="checkbox-slider round"></div>
+    	<p class="switch-text">2D</p>
+    </label>    
+  </header>
+	
+  <main>
+    <wrapper>
+	  <p class="text1">Text1 - Anaglyph</p>
+	  <p class="text2">Text2 - Anaglyph</p>
+	  <img class="image" alt="Image 1" src="1.jpg" width="800">
+    </wrapper>
+  </main>
+ 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/anaglyph.js"></script>
+  <script type="text/javascript" src="js/anaglyph_plugin.js"></script>
+<script type="text/javascript">
+
+  
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>

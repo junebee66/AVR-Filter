@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>AVR Filter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- <link type="text/css" rel="stylesheet" href="main.css"> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/loaders/GLTFLoader.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/controls/OrbitControls.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/effects/AnaglyphEffect.js "></script>
+                
+                <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script> -->
+              <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+
+                
+	<body>
+                <!-- <video id="myVideo" width="320" height="240" controls autoplay> -->
+                        <video id="myVideo" width="1920" height="1080" controls >
+                <!-- <video id="myVideo" width="960" height="540" controls > -->
+                        <source src="./source/Elemental Official Trailer.mp4" type="video/mp4"  >
+                        <!-- <source src="https://youtu.be/hXzcyx9V0xw" type="video/mp4"  > -->
+                        Your browser does not support the video tag.
+                </video>
+        
+        <!-- <canvas id="c" width="1600px" height="800px"></canvas> -->
+        <!-- only for point cloud & pointVideo -->
+        <canvas id="myCanvas"></canvas> 
+                            
+                            <!-- final sketch -->
+        <!-- <script type="module" src="pointcloudCam.js"></script> -->
+        <!-- this is the video point cloud -->
+        <!-- <script type="module" src="pointVideo.js"></script>  -->
+        <!-- <script type="module" src="bigPixels.js"></script>  -->
+        <!-- <script type="module" src="anaglyph.js"></script> -->
+        <!-- <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script> -->
+        <!-- <script type="module" src="sketch.js"></script> -->
+        
+        <!-- <script type="module" src="cameraAnaglyph.js"></script>  -->
+        <script type="module" src="ply.js"></script> 
+        <!-- <script type="module" src="hoverAttempt.js"></script>  -->
+        <!-- <script type="module" src="draggable.js"></script>  -->
+        <!-- <script type="module" src="youtubeAnaglyph.js"></script>  -->
+
+        <!-- <script type="module">
+                let videoTag = document.getElementById("myVideo");
+        
+                function playVid() {
+                        videoTag.play();
+                        }
+        
+                function pauseVid() {
+                        videoTag.pause();
+                        }
+        </script> -->
+
+
+
+        <button onclick="playVid()" type="button">PLAY</button>
+        <button onclick="pauseVid()" type="button">PAUSE</button>
+
+        <script> 
+                var vid = document.getElementById("myVideo"); 
+                
+                function playVid() { 
+                  vid.play(); 
+                } 
+                
+                function pauseVid() { 
+                  vid.pause(); 
+                } 
+        </script> 
+
+
+                            <!-- Material Sketch -->
+        <!-- Load 3D Models -->
+                <!-- <script type="module" src="loadModel.js"></script> -->
+        <!-- Anaglyph Effects -->
+                <!-- <script type="module" src="anaglyph.js"></script> -->
+        <!-- loadmodel + anaglyph effct ORIGINAL -->
+                <!-- <script type="module" src="windmillBox.js"></script> -->
+	</body>
+
+
+</html>
