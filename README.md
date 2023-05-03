@@ -1,2 +1,2 @@
-# avr_filter
-![image is not loaded, please try again](./assets/co-vision-night.png)
+# AVR Filter
+![image is not loaded, please try again](./source/logo-black.png)
