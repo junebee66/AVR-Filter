@@ -29,9 +29,10 @@ body {
     border:0px #ffffff none;
     display: block;
     margin-left:1vw;
-    margin-top: 5vh;
-    height: 66vh;
-    width: 100%; 
+    margin-top: 3vh;
+    height: 190px;
+    /* height: 65vh; */
+    /* width: 90%;  */
    }
 
    /* #main{

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ADN CSS3D Demo</title>
+  <title>webEmbed</title>
 
 
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -17,11 +17,13 @@
 
         <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/controls/OrbitControls.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/effects/AnaglyphEffect.js "></script>
-
+		<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div id="container"></div>
+	<div id="AVR"></div>
+	<div id="container"></div>
+	<!-- <div id="AVR"></div> -->
     <div id="blocker"></div>
 
 <script type="module">
@@ -29,14 +31,14 @@
 import * as THREE from 'https://orvillechomer.github.io/miscJsFiles/THREEJS/build/three.module.js';
 import { TrackballControls } from 'https://orvillechomer.github.io/miscJsFiles/THREEJS/r120/jsm/controls/TrackballControls.js';
 import { CSS3DRenderer, CSS3DObject } from 'https://orvillechomer.github.io/miscJsFiles/THREEJS/r120/jsm/renderers/CSS3DRenderer.js';
+import { AnaglyphEffect } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/effects/AnaglyphEffect.js';
 
 /*
 
    Tuesday, September 22, got Pen working again!
 
-
  */
-var camera, scene, renderer;
+let camera, scene, renderer, effect, avrEffect;
 			var controls;
 			var Element = function ( id, x, y, z, ry ) {
 				var div = document.createElement( 'div' );
@@ -61,15 +63,26 @@ init();
 			function init() {
 
 				var container = document.getElementById( 'container' );
+				var containerAV = document.getElementById( 'AVR' );
 
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 5000 );
 				camera.position.set( 500, 350, 750 );
 
+
 				scene = new THREE.Scene();
+
 
 				renderer = new CSS3DRenderer();
 				renderer.setSize( window.innerWidth, window.innerHeight );
+				// renderer.setPixelRatio( window.devicePixelRatio );
 				container.appendChild( renderer.domElement );
+				
+				avrEffect = new THREE.WebGLRenderer({ alpha: true, antialias: true });;
+    			avrEffect.setPixelRatio( window.devicePixelRatio );
+				containerAV.appendChild( avrEffect.domElement );
+				
+				effect = new AnaglyphEffect( avrEffect );
+				effect.setSize( window.innerWidth*0.68, window.innerHeight*0.7);
 
 				var group = new THREE.Group();
 				group.add( new Element( 'TlLijkYQjlw', 0, 0, 240, 0 ) );
@@ -99,6 +112,8 @@ init();
 
 				} );
 
+				
+
 			}
 
 			function onWindowResize() {
@@ -106,6 +121,7 @@ init();
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
+				effect.setSize( window.innerWidth, window.innerHeight );
 
 			}
 
@@ -114,6 +130,7 @@ init();
 				requestAnimationFrame( animate );
 				controls.update();
 				renderer.render( scene, camera );
+				effect.render( scene, camera );
 
 			}
 
