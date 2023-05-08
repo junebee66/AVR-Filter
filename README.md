@@ -10,14 +10,16 @@ This software allows users to see their usual content on moblie devices coming o
 [✍🏻 Documentation]() </br>
 
 ## **🫱 How to Use?**
+![image is not loaded, please try again](./source/gifs/AVR%20Home.gif)
 
 ### **🛑 DISCLAIMER 🛑**
 The AVR Filter is currently under the proccess of provisional patent approval. All rights reserved. (Web demo is free and open source)
 
 ### **🛠️ Functionality**
-ddf
+![image is not loaded, please try again](./source/AVR%20Fearture.jpg)
 
 ### **💡About**
+![image is not loaded, please try again](./source/logo-black.jpg)
 >AVR filter is a software that recolors and re-positions the pixels on users’ mobile devices to depict 3D illusions that is similar to the visual people see in theaters for 3D films. 
 
 
