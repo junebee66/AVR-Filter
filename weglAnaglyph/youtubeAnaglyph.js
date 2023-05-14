@@ -193,7 +193,7 @@ function init() {
         YTPlane = new THREE.Mesh(new THREE.PlaneGeometry(5, 3), YTMaterial);
         YTPlane.material.side = THREE.DoubleSide;
         YTPlane.position.x = 0;
-        YTPlane.position.x = -2;
+        YTPlane.position.x = 0;
         YTPlane.position.z = -1;
 
         scene.add(YTPlane);

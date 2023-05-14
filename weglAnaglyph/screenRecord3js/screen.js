@@ -1,3 +1,68 @@
+const videoElem = document.getElementById("myVideo");
+const logElem = document.getElementById("log");
+const startElem = document.getElementById("start");
+const stopElem = document.getElementById("stop");
+
+// Options for getDisplayMedia()
+
+const displayMediaOptions = {
+  video: {
+    displaySurface: "window",
+  },
+  audio: false,
+};
+
+// Set event listeners for the start and stop buttons
+startElem.addEventListener(
+  "click",
+  (evt) => {
+    startCapture();
+    init();
+    onResize();
+  },
+  false
+);
+
+stopElem.addEventListener(
+  "click",
+  (evt) => {
+    stopCapture();
+  },
+  false
+);
+
+console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
+console.error = (msg) =>
+  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
+
+async function startCapture() {
+  logElem.innerHTML = "";
+
+  try {
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
+    dumpOptionsInfo();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function stopCapture(evt) {
+  let tracks = videoElem.srcObject.getTracks();
+
+  tracks.forEach((track) => track.stop());
+  videoElem.srcObject = null;
+}
+
+function dumpOptionsInfo() {
+  const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+
+  console.log("Track settings:");
+  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
+  console.log("Track constraints:");
+  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
+}
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 
 import { AnaglyphEffect } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/effects/AnaglyphEffect.js';
@@ -12,8 +77,8 @@ import {DragControls} from 'https://threejsfundamentals.org/threejs/resources/th
 
 //this sketch uses the javascript tag for three.js library
 //and needs to activate the canvas DOM inside html named  "myCanvas" 
-window.addEventListener('load', init); // Wait for loading
-window.addEventListener('resize', onResize); // When window resized
+// window.addEventListener('load', init); // Wait for loading
+// window.addEventListener('resize', onResize); // When window resized
 // window.addEventListener('load', playVid);
 // window.addEventListener('load', pauseVid);
 
@@ -34,8 +99,6 @@ let perspSlider = document.getElementById("perspSlider");
 
 let sizeSlider = document.getElementById("sizeSlider");
 let gridSlider = document.getElementById("gridSlider");
-
-// new YouTubeToHtml5();
 
 function init() {  
     // console.log('test');
@@ -81,7 +144,7 @@ const textureCube = new THREE.CubeTextureLoader().load( urls );
     // scene.background = textureCube;
     
     // Create camera
-    camera = new THREE.PerspectiveCamera( 22, (window.innerWidth) / window.innerHeight, 10, 10000 );
+    camera = new THREE.PerspectiveCamera( 35, (window.innerWidth) / window.innerHeight, 10, 10000 );
     // camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 10000 ); //ratatui
     // camera = new THREE.OrthographicCamera( width, width, height, height, 1, 1000 );
     
@@ -104,8 +167,6 @@ const textureCube = new THREE.CubeTextureLoader().load( urls );
 
     // Init webcam & particle
     // getDevices()
-
-
     initWebCam();
 
     // let num = 5;

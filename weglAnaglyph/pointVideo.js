@@ -34,7 +34,6 @@ let videoTag;
 
 
 function init() {  
-    console.log('test');
     // Get window size
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
@@ -116,6 +115,7 @@ function getDevices(){
 }
 
 function initWebCam(){
+    //this is for webcam
     // console.log("initWebCam...");
     // webCam = document.createElement('video');
     // webCam.id = 'webcam';

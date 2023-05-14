@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="stylesheet" type="text/css" href="screen.css">
+        <title>Using the Screen Capture API - streaming_screen_capture - code sample</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/effects/AnaglyphEffect.js "></script>
+        
+    </head>
+    <body>
+        
+<p>
+  <div id="allSliders">
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+    
+   <!-- <button onclick="playVid()" type="button">PLAY</button>
+   <button onclick="pauseVid()" type="button">PAUSE</button> -->
+   <p>Perps</p>
+   <input id="perspSlider" type="range" min="5" max="40" value="15">
+   <p>Sizes</p>
+   <input id="sizeSlider" type="range" min="1" max="100" value="10">
+   <p>y Pos</p>
+   <input id="yPosSlider" type="range" min="10" max="100" value="10">
+   <p>Grid</p>
+   <input id="gridSlider" type="range" min="10" max="100" value="10">
+   <label class="switch">
+           <input type="checkbox" class="onOff ">
+           <span class="slider round"></span>
+         </label>        
+   </div>
+</p>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8sX9IEHWRJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+<script type="module" src="screen.js"></script>
+<video width="1920" height="1080" id="myVideo" autoplay ></video>
+
+<canvas id="myCanvas"></canvas> 
+
+
+          <br />
+
+<strong>Log:</strong>
+<br />
+<pre id="log"></pre>
+  
+  
+          <!-- <script> 
+                  var vid = document.getElementById("myVideo"); 
+                  
+                  function playVid() { 
+                    vid.play(); 
+                  } 
+                  
+                  function pauseVid() { 
+                    vid.pause(); 
+                  } 
+  
+                  
+  //                 var slider = document.getElementById("myRange");
+  // var output = document.getElementById("demo");
+  // output.innerHTML = slider.value;
+  
+          </script>  -->
+  
+    
+        </body>
+</html>

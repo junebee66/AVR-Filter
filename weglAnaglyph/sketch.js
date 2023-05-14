@@ -232,6 +232,8 @@ function init() {
         adMaterial = new THREE.MeshLambertMaterial({ map : adTexture });
         adPlane = new THREE.Mesh(new THREE.PlaneGeometry(2.5/1.9, 1/1.9), adMaterial);
         adPlane.material.side = THREE.DoubleSide;
+        // adPlane.position.x = 1.5;
+        // adPlane.position.y = 0.5;
         adPlane.position.x = 1.5;
         adPlane.position.y = 0.5;
         adPlane.position.z = 0;
@@ -244,6 +246,7 @@ function init() {
         let interactionGeo = new THREE.PlaneGeometry(2.5/1.9, 1/1.9);
         // let interactionGeo = new THREE.Mesh(new THREE.PlaneGeometry(5, 3), YTMaterial);
         let interactionMesh = new THREE.Mesh(interactionGeo, mat);
+        // interactionMesh.position.set(1.5, 0.5, -0.01);
         interactionMesh.position.set(1.5, 0.5, -0.01);
 
         // interactionMesh.layers.set(2);
@@ -251,7 +254,7 @@ function init() {
         interactionMesh.userData.mesh = adPlane;
 
         myGridInteractionObjects.push(interactionMesh);
-        scene.add(interactionMesh);
+        // scene.add(interactionMesh);
       
       
       //YouTube background
@@ -421,7 +424,7 @@ function onKeyUp() {
   for(let i=0; i<intersections.length; i++){
       // intersections[i].position.z = -3;
       console.log('hover');
-      intersections[i].object.userData.mesh.position.z = -13; 
+      intersections[i].object.userData.mesh.position.z = 3; 
     }
   render();
 
