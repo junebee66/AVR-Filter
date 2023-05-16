@@ -21,8 +21,13 @@ body {
    }
 
    #leftColumn{
-    width: 70vw;
-    height: 95vh;
+    width: 180vw;
+    height: 70vh;
+   }
+
+   #rightColumn{
+    width: 180vw;
+    height: 70vh;
    }
 
    #mainVideo{
@@ -30,9 +35,9 @@ body {
     display: block;
     margin-left:1vw;
     margin-top: 3vh;
-    height: 190px;
-    /* height: 65vh; */
-    /* width: 90%;  */
+    /* height: 290px; */
+    height: 80vh;
+    width: 90%; 
    }
 
    /* #main{
