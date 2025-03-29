@@ -5,6 +5,7 @@ This software allows users to see their usual content on moblie devices coming o
 **Click here for..**
 >
 [💻 Web Demo](https://junebee66.github.io/AVR-Filter/weglAnaglyph/nova/nova.html) </br>
+[🎥 Mission Video](https://www.youtube.com/watch?v=8wd_Eb3irSs) </br>
 [🎥 Concept Video](https://youtu.be/ntalhCrsPZo) </br>
 [⭐️ Official Website](https://www.junesbee.com/avr) </br>
 [✍🏻 Documentation](https://github.com/junebee66/AVR-Filter) </br>
